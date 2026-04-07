@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MapPin, Send } from "lucide-react";
+import Image from "next/image";
 
 // API_READY — fetch footer content from CMS here
 
@@ -92,11 +93,9 @@ export default function Footer() {
 
           {/* Brand */}
           <Link href="/" className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 text-base font-black text-white">
-              A
-            </span>
+            <Image  src="/images/plorix.png" alt="Plorix Logo" width={40} height={40}  />
             <div>
-              <p className="font-bold leading-none text-white">Alu</p>
+              <p className="font-bold leading-none text-white">Plorix</p>
               <p className="mt-0.5 text-xs text-gray-500">Digital Agency</p>
             </div>
           </Link>
@@ -126,10 +125,10 @@ export default function Footer() {
                 Say Hello
               </p>
               <a
-                href="mailto:hello@alu.studio"
+                href="mailto:admin@plorixhub.com"
                 className="mt-0.5 text-sm text-gray-300 transition-colors hover:text-indigo-400"
               >
-                hello@alu.studio
+                admin@plorixhub.com
               </a>
             </div>
           </div>
@@ -216,7 +215,7 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-5 lg:px-8">
           <p className="text-sm text-gray-500">
             Copyright {new Date().getFullYear()}{" "}
-            <span className="font-bold text-white">Alu</span> — All rights reserved.
+            <span className="font-bold text-white">Plorix</span> — All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/terms" className="text-sm text-gray-500 transition-colors hover:text-white">

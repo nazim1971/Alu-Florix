@@ -3,8 +3,8 @@ import PageHero from "@/components/sections/PageHero";
 import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Alu",
-  description: "Learn how Alu collects, uses, protects, and manages your personal information in compliance with GDPR and industry best practices.",
+  title: "Privacy Policy — How We Handle Your Data | Plorix Digital Agency",
+  description: "Learn how Plorix collects, uses, protects, and manages your personal information in compliance with GDPR and industry best practices.",
 };
 
 interface PolicySection {
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
       <section className="py-16 lg:py-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <p className="mb-12 text-gray-600 dark:text-gray-400 leading-relaxed">
-            At Alu, we take your privacy seriously. This policy describes what
+            At Plorix, we take your privacy seriously. This policy describes what
             personal information we collect, how we use it, and the choices you
             have. It applies to information collected through our website and
             services.

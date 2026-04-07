@@ -6,9 +6,9 @@ import ContactSection from "@/components/sections/ContactSection";
 import { PROJECTS } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "Our Work — Portfolio | Alu",
+  title: "Our Work — Portfolio | Plorix Digital Agency",
   description:
-    "Explore Alu's portfolio of high-performance digital products — from fintech cloud migrations to SaaS platforms, e-commerce, and enterprise software.",
+    "Explore Plorix's portfolio of high-performance digital products — from fintech cloud migrations to SaaS platforms, e-commerce, and enterprise software.",
 };
 
 export default function WorkPage() {

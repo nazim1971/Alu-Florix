@@ -131,7 +131,8 @@ export async function submitContact(
     }
     return {
       ok: false,
-      error: "Email service is not configured. Please contact us directly.",
+      error:
+        "Email service is not configured. Please contact us directly at admin@plorixhub.com.",
     };
   }
 
@@ -151,10 +152,10 @@ export async function submitContact(
       s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
     await transporter.sendMail({
-      from: `"Alu Contact Form" <${process.env.SMTP_USER}>`,
+      from: `"Plorix Contact Form" <${process.env.SMTP_USER}>`,
       to: "md.nazimuddinaj@gmail.com",
       replyTo: email,
-      subject: `[Alu Contact] ${subject}`,
+      subject: `[Plorix Contact] ${subject}`,
       html: `<!DOCTYPE html>
 <html lang="en">
 <body style="font-family:system-ui,-apple-system,sans-serif;background:#f1f5f9;margin:0;padding:32px 0">
@@ -203,7 +204,7 @@ export async function submitContact(
       </div>
     </div>
     <div style="padding:16px 32px;background:#f8fafc;border-top:1px solid #e2e8f0;font-size:12px;color:#94a3b8;text-align:center">
-      Alu · Automated message from the contact form. Do not reply to the sender address.
+      Plorix · Automated message from the contact form. Do not reply to the sender address.
     </div>
   </div>
 </body>
@@ -228,7 +229,7 @@ export async function submitContact(
     return {
       ok: false,
       error:
-        "Failed to send your message. Please try again or email us directly at info@alu.studio.",
+        "Failed to send your message. Please try again or email us directly at admin@plorixhub.com.",
     };
   }
 }

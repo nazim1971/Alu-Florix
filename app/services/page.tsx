@@ -4,7 +4,7 @@ import Services from "@/components/sections/Services";
 import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Services — Alu",
+  title: "Services — Comprehensive IT Solutions for Your Business | Plorix Digital Agency",
   description:
     "Explore our comprehensive IT solutions: web development, custom software, consulting, and cybersecurity & cloud services.",
 };

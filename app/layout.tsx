@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Alu — Modern Solutions for Modern Businesses",
+  title: "Plorix — Modern Solutions for Modern Businesses",
   description: "We build high-performance digital products that help businesses grow faster.",
 };
 

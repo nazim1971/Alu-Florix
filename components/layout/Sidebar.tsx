@@ -13,6 +13,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import ThemeToggle from "@/components/ui/ThemeToggle";
+import Image from "next/image";
 
 const SERVICES_SUB = [
   { Icon: Globe, title: "Web & App Development", href: "/services/web-development" },
@@ -81,10 +82,14 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
             onClick={onClose}
             className="flex items-center gap-2 text-lg font-bold text-white"
           >
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600 text-xs font-black text-white">
-              A
-            </span>
-            Alu
+            <Image
+              src="/images/plorix.png"
+              alt="Plorix Logo"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
+            Plorix
           </Link>
           <button
             onClick={onClose}

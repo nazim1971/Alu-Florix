@@ -5,7 +5,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import Accordion, { AccordionItem } from "@/components/ui/Accordion";
 
 export const metadata: Metadata = {
-  title: "Web & App Development — Alu",
+  title: "Web & App Development — High-Performance Solutions for Modern Businesses | Plorix Digital Agency",
   description:
     "High-performance web and mobile applications built with React, Next.js, and Node.js for modern businesses.",
 };
@@ -126,7 +126,7 @@ export default function WebDevelopmentPage() {
               {/* Welcome section */}
               <div className="mt-12">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white">
-                  Welcome to Alu.
+                  Welcome to Plorix.
                 </h3>
                 <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
                   Where innovation meets passion in a journey that started with a

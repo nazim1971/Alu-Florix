@@ -5,9 +5,9 @@ import PageHero from "@/components/sections/PageHero";
 import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "About Us — Alu | Digital Agency",
+  title: "About Us — Plorix | Digital Agency",
   description:
-    "Learn about Alu — a small, focused team building high-performance digital products. Meet our team, values, and what drives us to deliver exceptional work.",
+    "Learn about Plorix — a small, focused team building high-performance digital products. Meet our team, values, and what drives us to deliver exceptional work.",
 };
 
 interface TeamMember {
@@ -68,7 +68,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="mt-6 text-xl leading-relaxed text-gray-600 dark:text-gray-400">
-              Alu was founded in 2021 with one idea: a tight-knit team of
+              Plorix was founded in 2021 with one idea: a tight-knit team of
               experts can outship a 50-person agency every time — if the process
               is right.
             </p>

@@ -5,7 +5,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import Accordion, { AccordionItem } from "@/components/ui/Accordion";
 
 export const metadata: Metadata = {
-  title: "Software Consulting — Alu",
+  title: "Software Consulting — Expert IT Advisory & Architecture Reviews | Plorix Digital Agency",
   description:
     "Expert technical consulting, architecture reviews, code audits, and digital transformation roadmaps for your business.",
 };
@@ -127,7 +127,7 @@ export default function ConsultingPage() {
               {/* Welcome section */}
               <div className="mt-12">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white">
-                  Welcome to Alu.
+                  Welcome to Plorix.
                 </h3>
                 <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
                   Where innovation meets passion in a journey that started with a

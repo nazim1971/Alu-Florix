@@ -18,9 +18,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const project = PROJECTS.find((p) => p.slug === slug);
-  if (!project) return { title: "Project — Alu" };
+  if (!project) return { title: "Project — Plorix Digital Agency" };
   return {
-    title: `${project.title} — Portfolio | Alu`,
+    title: `${project.title} — Portfolio | Plorix Digital Agency`,
     description: project.shortDesc,
   };
 }

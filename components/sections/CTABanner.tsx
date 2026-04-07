@@ -31,7 +31,7 @@ export default function CTABanner() {
               24 hours.
             </p>
             <Button
-              href="mailto:hello@alu.studio"
+              href="mailto:admin@plorixhub.com"
               variant="ghost"
               size="lg"
               className="border-white/30 text-white hover:bg-white/10 hover:border-white/60"

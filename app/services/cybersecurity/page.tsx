@@ -5,7 +5,7 @@ import ContactSection from "@/components/sections/ContactSection";
 import Accordion, { AccordionItem } from "@/components/ui/Accordion";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity & Cloud Services — Alu",
+  title: "Cybersecurity & Cloud Services — Enterprise Security & Cloud Solutions | Plorix Digital Agency",
   description:
     "Penetration testing, OWASP compliance, cloud migration, and DevSecOps to keep your business secure and resilient.",
 };
@@ -127,7 +127,7 @@ export default function CybersecurityPage() {
               {/* Welcome section */}
               <div className="mt-12">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white">
-                  Welcome to Alu.
+                  Welcome to Plorix.
                 </h3>
                 <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
                   Where innovation meets passion in a journey that started with a
@@ -138,7 +138,7 @@ export default function CybersecurityPage() {
                   commitment to excellence.
                 </p>
                 <p className="mt-4 leading-relaxed text-gray-500 dark:text-gray-400">
-                  In an era where threats evolve daily, Alu stands as your
+                  In an era where threats evolve daily, Plorix stands as your
                   dedicated security partner. Our certified experts implement
                   proactive defenses and cloud architectures that scale without
                   compromising safety. From humble beginnings to our current

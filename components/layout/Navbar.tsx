@@ -99,8 +99,8 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
           >
-            <Image  src="/images/logo.svg" alt="Alu Logo" width={60} height={60} />
-            <span className="text-xl font-bold text-indigo-500">Node-devs</span>
+            <Image  src="/images/plorix.png" alt="Plorix Logo" width={60} height={60} />
+            {/* <span className="text-xl font-bold text-indigo-500">Node-devs</span> */}
           </Link>
 
           {/* Center nav links — desktop */}

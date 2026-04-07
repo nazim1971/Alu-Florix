@@ -3,8 +3,8 @@ import PageHero from "@/components/sections/PageHero";
 import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions — Alu",
-  description: "Read the terms and conditions governing use of Alu services, including project agreements, IP ownership, payment terms, and confidentiality.",
+  title: "Terms & Conditions — Legal Terms Governing Use of Plorix Services | Plorix Digital Agency",
+  description: "Read the terms and conditions governing use of Plorix services, including project agreements, IP ownership, payment terms, and confidentiality.",
 };
 
 interface Section {
@@ -16,14 +16,14 @@ const SECTIONS: Section[] = [
   {
     title: "1. Acceptance of Terms",
     body: [
-      "By accessing or using any service provided by Alu ('Company', 'we', 'us'), you agree to be bound by these Terms and Conditions. If you do not agree to all of these terms, do not use our services.",
+      "By accessing or using any service provided by Plorix ('Company', 'we', 'us'), you agree to be bound by these Terms and Conditions. If you do not agree to all of these terms, do not use our services.",
       "We reserve the right to update or modify these terms at any time without prior notice. Your continued use of the service after any changes constitutes your acceptance of the new terms.",
     ],
   },
   {
     title: "2. Services",
     body: [
-      "Alu provides digital product design, web development, and growth strategy services on a project or retainer basis. Specific deliverables, timelines, and pricing are defined in individual Statements of Work (SOW) signed by both parties.",
+      "Plorix provides digital product design, web development, and growth strategy services on a project or retainer basis. Specific deliverables, timelines, and pricing are defined in individual Statements of Work (SOW) signed by both parties.",
       "We reserve the right to refuse service to anyone for any reason at any time.",
     ],
   },
@@ -31,14 +31,14 @@ const SECTIONS: Section[] = [
     title: "3. Intellectual Property",
     body: [
       "Upon full payment of all invoices, the client receives full ownership of all custom deliverables created specifically for their project, including source code and design files.",
-      "Alu retains ownership of all pre-existing tools, frameworks, templates, and methodologies used during the engagement. Nothing in this agreement transfers ownership of our proprietary processes or general-purpose code libraries.",
+      "Plorix retains ownership of all pre-existing tools, frameworks, templates, and methodologies used during the engagement. Nothing in this agreement transfers ownership of our proprietary processes or general-purpose code libraries.",
     ],
   },
   {
     title: "4. Payment Terms",
     body: [
       "Unless otherwise specified in the SOW, all projects require a 50% deposit before work begins. The remaining balance is due upon delivery of the final deliverables.",
-      "Invoices are due within 14 days of receipt. Late payments may incur a 1.5% monthly interest charge. Alu reserves the right to pause or terminate work on unpaid accounts.",
+      "Invoices are due within 14 days of receipt. Late payments may incur a 1.5% monthly interest charge. Plorix reserves the right to pause or terminate work on unpaid accounts.",
     ],
   },
   {
@@ -51,7 +51,7 @@ const SECTIONS: Section[] = [
   {
     title: "6. Limitation of Liability",
     body: [
-      "To the maximum extent permitted by law, Alu shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to the use of our services.",
+      "To the maximum extent permitted by law, Plorix shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to the use of our services.",
       "Our total cumulative liability to you for any claims arising from or related to these terms shall not exceed the total fees paid by you in the three (3) months preceding the claim.",
     ],
   },
@@ -59,7 +59,7 @@ const SECTIONS: Section[] = [
     title: "7. Termination",
     body: [
       "Either party may terminate a project engagement with 14 days written notice. The client is responsible for payment for all work completed up to the termination date.",
-      "Alu may terminate immediately if the client breaches these terms or if continuation of the work would violate any law or regulation.",
+      "Plorix may terminate immediately if the client breaches these terms or if continuation of the work would violate any law or regulation.",
     ],
   },
   {
@@ -85,7 +85,7 @@ export default function TermsPage() {
           <p className="mb-12 text-gray-600 dark:text-gray-400 leading-relaxed">
             Please read these Terms and Conditions carefully before using our
             services. These terms apply to all clients, visitors, and other
-            users who access or use Alu&apos;s services.
+            users who access or use Plorix&apos;s services.
           </p>
 
           <div className="space-y-12">

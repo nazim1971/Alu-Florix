@@ -22,7 +22,7 @@ function MockBrowser() {
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
         <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
         <div className="ml-3 flex-1 rounded bg-gray-700 px-2 py-0.5 text-[10px] text-gray-400">
-          https://alu.studio
+          https://plorixhub.com
         </div>
       </div>
       {/* Page content mockup */}

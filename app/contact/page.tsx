@@ -4,8 +4,8 @@ import PageHero from "@/components/sections/PageHero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Alu",
-  description: "Get in touch with Alu for web development, app solutions, IT services, and support. Contact our team for inquiries, quotes, or project discussions.",
+  title: "Contact Us | Plorix Digital Agency",
+  description: "Get in touch with Plorix for web development, app solutions, IT services, and support. Contact our team for inquiries, quotes, or project discussions.",
 };
 
 export default function ContactPage() {

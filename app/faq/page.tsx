@@ -4,7 +4,7 @@ import FaqContent from "@/components/sections/FaqContent";
 import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "FAQ — Frequently Asked Questions | Alu",
+  title: "FAQ — Frequently Asked Questions | Plorix Digital Agency",
   description: "Find answers to common questions about our services, pricing, technology, payment options, and more.",
 };
 

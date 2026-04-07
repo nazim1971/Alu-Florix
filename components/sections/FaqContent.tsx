@@ -14,7 +14,7 @@ const FAQ_CATEGORIES = [
       },
       {
         q: "How Can I Contact Customer Support?",
-        a: "You can reach our support team via email at info@alu.studio, call us at +990-737 621 432, or use the contact form on our website. We aim to respond within one business day.",
+        a: "You can reach our support team via email at admin@plorixhub.com, call us at +990-737 621 432, or use the contact form on our website. We aim to respond within one business day.",
       },
       {
         q: "What Payment Methods Do You Accept?",

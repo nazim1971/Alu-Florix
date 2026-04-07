@@ -96,7 +96,7 @@ function ContactContent() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">To More Inquiry</p>
-                  <p className="mt-0.5 text-base font-bold text-gray-900 dark:text-white">+990-737 621 432</p>
+                  <p className="mt-0.5 text-base font-bold text-gray-900 dark:text-white">+880 1629-290809</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -105,7 +105,7 @@ function ContactContent() {
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">To Send Mail</p>
-                  <p className="mt-0.5 text-base font-bold text-gray-900 dark:text-white">info@alu.studio</p>
+                  <p className="mt-0.5 text-base font-bold text-gray-900 dark:text-white">admin@plorixhub.com</p>
                 </div>
               </div>
             </div>
