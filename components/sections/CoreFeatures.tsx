@@ -36,6 +36,7 @@ import {
 } from "react-icons/si";
 import { Cloud } from "lucide-react";
 import React from "react";
+import { DiRedis } from "react-icons/di";
 
 
 /* ── Features tab data ──────────────────────────────────────── */
@@ -148,7 +149,7 @@ const TECHNOLOGIES: { category: string; items: Tech[] }[] = [
     items: [
       { Icon: SiPostgresql, name: "PostgreSQL", color: "#4169E1", bg: "bg-blue-50 dark:bg-blue-950/40" },
       { Icon: SiMongodb,    name: "MongoDB",    color: "#47A248", bg: "bg-green-50 dark:bg-green-950/40" },
-      { Icon: SiRedis,      name: "Redis",      color: "#DC382D", bg: "bg-red-50 dark:bg-red-950/40" },
+      { Icon: DiRedis ,      name: "Redis",      color: "#DC382D", bg: "bg-red-50 dark:bg-red-950/40" },
       { Icon: SiPrisma,     name: "Prisma ORM", color: "currentColor", bg: "bg-gray-100 dark:bg-gray-800" },
     ],
   },

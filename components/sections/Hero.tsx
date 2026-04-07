@@ -23,9 +23,9 @@ export default function Hero() {
         {/* Left — text */}
         <div className="flex flex-col gap-6">
           <h1 className="text-4xl font-black leading-tight tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
-           Focus on Your Business,
-            <br />
-             We’ll Handle the IT
+           Run Your Business,
+           <br />
+           Leave the IT to Us
           </h1>
 
           <p className="max-w-lg text-lg leading-relaxed text-gray-600 dark:text-gray-400">

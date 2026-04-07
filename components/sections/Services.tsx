@@ -19,7 +19,7 @@ const SERVICES: Service[] = [
     Icon: Globe,
     title: "Web & App Development",
     href: "/services/web-development",
-    image: "https://picsum.photos/seed/webdev/800/600",
+    image: "/images/Web & App Development.png",
     tags: [
       "Web Development", "Next.js", "React", "TypeScript", "REST APIs",
       "Performance", "SEO", "App Development", "UI/UX Design",
@@ -31,7 +31,7 @@ const SERVICES: Service[] = [
     Icon: Settings2,
     title: "Custom Software Development",
     href: "/services/custom-software",
-    image: "https://picsum.photos/seed/software/800/600",
+    image: "/images/Custom software solutions for businesses.png",
     tags: [
       "Custom Software", "Enterprise Apps", "Database Design", "API Integration",
       "Cloud Native", "DevOps", "CI/CD", "Microservices",
@@ -43,7 +43,7 @@ const SERVICES: Service[] = [
     Icon: Users,
     title: "Software Consult Service",
     href: "/services/consulting",
-    image: "https://picsum.photos/seed/consult/800/600",
+    image: "/images/Consulting meeting and strategy flow.png",
     tags: [
       "Technical Consulting", "Architecture Review", "Code Audits", "Team Training",
       "Tech Strategy", "Digital Transformation", "Roadmapping",
@@ -55,7 +55,7 @@ const SERVICES: Service[] = [
     Icon: ShieldCheck,
     title: "Cybersecurity & Cloud Services",
     href: "/services/cybersecurity",
-    image: "https://picsum.photos/seed/security/800/600",
+    image: "/images/Secure your cloud, scale your future.png",
     tags: [
       "Cybersecurity", "Cloud Infrastructure", "AWS", "Azure", "GCP",
       "Security Audits", "Penetration Testing", "Compliance",
@@ -126,7 +126,7 @@ export default function Services() {
                       src={service.image}
                       alt={service.title}
                       fill
-                      className="object-cover"
+                      className="object-contain "
                       sizes="(max-width: 1024px) 50vw, 30vw"
                     />
                   </div>

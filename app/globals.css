@@ -2,6 +2,9 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Hide the reCAPTCHA v3 floating badge — disclosure text is shown inline on the form */
+.grecaptcha-badge { visibility: hidden !important; }
+
 @theme {
   /* System font stack — zero network request, best LCP */
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
