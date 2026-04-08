@@ -170,6 +170,8 @@ type Tab = (typeof TABS)[number];
 /* ── Component ──────────────────────────────────────────────── */
 export default function CoreFeatures() {
   const [activeTab, setActiveTab] = useState<Tab>("Features");
+  const [showAllFeatures, setShowAllFeatures] = useState(false);
+  const [showAllTech, setShowAllTech] = useState(false);
 
   return (
     <section className="bg-slate-50 py-20 dark:bg-gray-900/50 lg:py-28">
@@ -182,7 +184,7 @@ export default function CoreFeatures() {
             Core Highlights
             <span className="inline-block h-px w-8 bg-orange-400" />
           </p>
-          <h2 className="text-4xl font-black text-gray-900 dark:text-white sm:text-5xl">
+          <h2 className="text-3xl font-black text-gray-900 dark:text-white sm:text-4xl">
             What We Bring to the Table
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-gray-500 dark:text-gray-400">
@@ -197,7 +199,7 @@ export default function CoreFeatures() {
             {TABS.map((tab) => (
               <button
                 key={tab}
-                onClick={() => setActiveTab(tab)}
+                onClick={() => { setActiveTab(tab); setShowAllFeatures(false); setShowAllTech(false); }}
                 className={`rounded-xl px-6 py-2.5 text-sm font-semibold transition-all duration-200 ${
                   activeTab === tab
                     ? "bg-indigo-600 text-white shadow-sm"
@@ -212,51 +214,89 @@ export default function CoreFeatures() {
 
         {/* ── Tab 1: Features ── */}
         {activeTab === "Features" && (
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {FEATURES.map((f) => (
-              <div
-                key={f.title}
-                className="flex items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-gray-900"
+          <>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {FEATURES.map((f, i) => {
+                let vis = "";
+                if (!showAllFeatures) {
+                  if (i >= 6) vis = "hidden";
+                  else if (i >= 3) vis = "hidden lg:flex";
+                }
+                return (
+                  <div
+                    key={f.title}
+                    className={`flex items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-gray-900 ${vis}`}
+                  >
+                    <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${f.color}`}>
+                      {f.icon}
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-900 dark:text-white">{f.title}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-gray-500 dark:text-gray-400">{f.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={() => setShowAllFeatures((v) => !v)}
+                className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 shadow-sm transition hover:border-indigo-400 hover:text-indigo-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-indigo-500 dark:hover:text-indigo-400"
               >
-                <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${f.color}`}>
-                  {f.icon}
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900 dark:text-white">{f.title}</p>
-                  <p className="mt-1 text-sm leading-relaxed text-gray-500 dark:text-gray-400">{f.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+                {showAllFeatures ? "Show Less ↑" : "View All Features ↓"}
+              </button>
+            </div>
+          </>
         )}
 
         {/* ── Tab 2: Technologies ── */}
         {activeTab === "Technologies" && (
-          <div className="space-y-10">
-            {TECHNOLOGIES.map((group) => (
-              <div key={group.category}>
-                <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
-                  {group.category}
-                </p>
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-                  {group.items.map((tech) => (
-                    <div
-                      key={tech.name}
-                      className={`flex flex-col items-center gap-3 rounded-2xl border border-gray-200 ${tech.bg} px-4 py-5 text-center shadow-sm transition hover:shadow-md dark:border-gray-800`}
-                    >
-                      <tech.Icon
-                        className="h-9 w-9"
-                        style={{ color: tech.color === "currentColor" ? undefined : tech.color }}
-                      />
-                      <p className="text-xs font-semibold text-gray-700 dark:text-gray-300">
-                        {tech.name}
-                      </p>
+          <>
+            <div className="space-y-10">
+              {TECHNOLOGIES.map((group, gi) => {
+                let groupVis = "";
+                if (!showAllTech) {
+                  if (gi >= 2) groupVis = "hidden";
+                  else if (gi === 1) groupVis = "hidden lg:block";
+                }
+                return (
+                  <div key={group.category} className={groupVis}>
+                    <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+                      {group.category}
+                    </p>
+                    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                      {group.items.map((tech, ti) => {
+                        let itemVis = "";
+                        if (!showAllTech && gi === 0 && ti >= 3) itemVis = "hidden lg:flex";
+                        return (
+                          <div
+                            key={tech.name}
+                            className={`flex flex-col items-center gap-3 rounded-2xl border border-gray-200 ${tech.bg} px-4 py-5 text-center shadow-sm transition hover:shadow-md dark:border-gray-800 ${itemVis}`}
+                          >
+                            <tech.Icon
+                              className="h-9 w-9"
+                              style={{ color: tech.color === "currentColor" ? undefined : tech.color }}
+                            />
+                            <p className="text-xs font-semibold text-gray-700 dark:text-gray-300">
+                              {tech.name}
+                            </p>
+                          </div>
+                        );
+                      })}
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={() => setShowAllTech((v) => !v)}
+                className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-700 shadow-sm transition hover:border-indigo-400 hover:text-indigo-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:border-indigo-500 dark:hover:text-indigo-400"
+              >
+                {showAllTech ? "Show Less ↑" : "View All Technologies ↓"}
+              </button>
+            </div>
+          </>
         )}
 
       </div>

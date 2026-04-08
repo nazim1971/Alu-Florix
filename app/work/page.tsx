@@ -42,6 +42,11 @@ export default function WorkPage() {
                 href={`/work/${project.slug}`}
                 className="group relative overflow-hidden rounded-3xl"
               >
+                {/* View details badge */}
+              <div className="absolute right-4 top-4 z-10 rounded-full border border-white/20 bg-black/30 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+                View Details →
+              </div>
+                  {/* Background image */}
                 <div className="relative aspect-4/3 w-full">
                   <Image
                     src={`https://picsum.photos/seed/${project.coverSeed}/800/600`}

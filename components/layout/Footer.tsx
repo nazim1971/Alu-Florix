@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MapPin, Send } from "lucide-react";
 import Image from "next/image";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 // API_READY — fetch footer content from CMS here
 
@@ -85,31 +86,31 @@ const StarIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-white">
+    <footer className="bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white">
 
       {/* ── Top contact bar ── */}
-      <div className="border-b border-gray-800">
+      <div className="border-b border-gray-200 dark:border-gray-800">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 py-6 sm:grid-cols-3 lg:px-8">
 
           {/* Brand */}
           <Link href="/" className="flex items-center gap-3">
             <Image  src="/images/plorix.png" alt="Plorix Logo" width={40} height={40}  />
             <div>
-              <p className="font-bold leading-none text-white">Plorix</p>
+              <p className="font-bold leading-none text-gray-900 dark:text-white">Plorix</p>
               <p className="mt-0.5 text-xs text-gray-500">Digital Agency</p>
             </div>
           </Link>
 
           {/* Address */}
           <div className="flex items-start gap-3">
-            <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-700 text-gray-400">
+            <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400">
               <MapPin className="h-4 w-4" />
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
                 Address
               </p>
-              <p className="mt-0.5 text-sm text-gray-300">
+              <p className="mt-0.5 text-sm text-gray-700 dark:text-gray-300">
                 123 Innovation Street, San Francisco, CA
               </p>
             </div>
@@ -117,7 +118,7 @@ export default function Footer() {
 
           {/* Email */}
           <div className="flex items-start gap-3">
-            <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-700 text-gray-400">
+            <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400">
               <Send className="h-4 w-4" />
             </div>
             <div>
@@ -126,7 +127,7 @@ export default function Footer() {
               </p>
               <a
                 href="mailto:admin@plorixhub.com"
-                className="mt-0.5 text-sm text-gray-300 transition-colors hover:text-indigo-400"
+                className="mt-0.5 text-sm text-gray-700 dark:text-gray-300 transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
               >
                 admin@plorixhub.com
               </a>
@@ -142,21 +143,21 @@ export default function Footer() {
 
           {/* Brand column */}
           <div>
-            <p className="max-w-xs text-sm leading-relaxed text-gray-400">
+            <p className="max-w-xs text-sm leading-relaxed text-gray-500 dark:text-gray-400">
               Where innovation meets passion — building high-performance digital
               products for modern businesses since 2021.
             </p>
 
             {/* Review badges */}
             <div className="mt-6 flex flex-wrap gap-3">
-              {["Clutch", "Google"].map((platform) => (
+              {["Google"].map((platform) => (
                 <div
                   key={platform}
-                  className="flex items-center gap-2 rounded-lg border border-gray-800 bg-gray-900 px-3 py-2"
+                  className="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-3 py-2"
                 >
                   <div>
                     <p className="text-xs leading-none text-gray-500">Review On</p>
-                    <p className="mt-0.5 text-sm font-bold text-white">{platform}</p>
+                    <p className="mt-0.5 text-sm font-bold text-gray-900 dark:text-white">{platform}</p>
                   </div>
                   <div className="flex gap-0.5">
                     {[1, 2, 3, 4].map((i) => <StarIcon key={i} />)}
@@ -179,7 +180,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-800 bg-gray-900 text-gray-400 transition-all hover:border-indigo-500 hover:text-indigo-400"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400 transition-all hover:border-indigo-400 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400"
                 >
                   {social.icon}
                 </a>
@@ -190,14 +191,14 @@ export default function Footer() {
           {/* Link columns */}
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.title}>
-              <h3 className="text-sm font-bold text-white">{col.title}</h3>
+              <h3 className="text-sm font-bold text-gray-900 dark:text-white">{col.title}</h3>
               <div className="mb-5 mt-1 h-0.5 w-8 bg-indigo-600" />
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-400 transition-colors hover:text-white"
+                      className="text-sm text-gray-500 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-white"
                     >
                       {link.label}
                     </Link>
@@ -211,19 +212,20 @@ export default function Footer() {
       </div>
 
       {/* ── Bottom bar ── */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-gray-200 dark:border-gray-800">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-5 lg:px-8">
           <p className="text-sm text-gray-500">
             Copyright {new Date().getFullYear()}{" "}
-            <span className="font-bold text-white">Plorix</span> — All rights reserved.
+            <span className="font-bold text-gray-900 dark:text-white">Plorix</span> — All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/terms" className="text-sm text-gray-500 transition-colors hover:text-white">
+            <Link href="/terms" className="text-sm text-gray-500 transition-colors hover:text-gray-900 dark:hover:text-white">
               Terms &amp; Conditions
             </Link>
-            <Link href="/privacy" className="text-sm text-gray-500 transition-colors hover:text-white">
+            <Link href="/privacy" className="text-sm text-gray-500 transition-colors hover:text-gray-900 dark:hover:text-white">
               Privacy Policy
             </Link>
+            <ThemeToggle />
           </div>
         </div>
       </div>

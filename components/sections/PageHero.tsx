@@ -18,7 +18,7 @@ export default function PageHero({
   imageSeed = "office-team",
 }: PageHeroProps) {
   return (
-    <section className="relative h-72 overflow-hidden sm:h-80 lg:h-96">
+    <section className="relative h-72  overflow-hidden sm:h-80 lg:h-96">
       <Image
         src={`https://picsum.photos/seed/${imageSeed}/1600/600`}
         alt={`${title} hero`}
@@ -29,8 +29,8 @@ export default function PageHero({
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-gray-900/65" />
       {/* Content */}
-      <div className="relative flex h-full flex-col items-start justify-end px-6 pb-12 lg:px-16">
-        <h1 className="text-5xl font-black uppercase tracking-tight text-white sm:text-6xl lg:text-7xl">
+      <div className="relative max-w-7xl mx-auto flex h-full flex-col items-start justify-end px-6 pb-12 lg:px-16">
+        <h1 className="text-3xl font-black uppercase tracking-tight text-white sm:text-4xl lg:text-5xl">
           {title}
         </h1>
         <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-5 py-2 text-sm font-semibold text-white backdrop-blur-sm">

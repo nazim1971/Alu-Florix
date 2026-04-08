@@ -73,7 +73,7 @@ export default function Services() {
           {/* LEFT — sticky */}
           <div className="flex items-center border-b border-gray-200 px-6 py-16 dark:border-gray-800 lg:w-[40%] lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:self-start lg:border-b-0 lg:border-r lg:px-12 lg:py-24">
             <div className="max-w-xs">
-              <h2 className="text-4xl font-black leading-tight text-gray-900 dark:text-white sm:text-5xl">
+              <h2 className="text-3xl font-black leading-tight text-gray-900 dark:text-white sm:text-4xl">
                 Comprehensive
                 <br />
                 Solutions.

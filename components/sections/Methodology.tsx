@@ -9,7 +9,7 @@ export default function Methodology() {
             Our Approach
             <span className="inline-block h-px w-8 bg-orange-400" />
           </p>
-          <h2 className="text-4xl font-black text-gray-900 dark:text-white sm:text-5xl">
+          <h2 className="text-3xl font-black text-gray-900 dark:text-white sm:text-4xl">
             Our Proven Methodology
           </h2>
         </div>

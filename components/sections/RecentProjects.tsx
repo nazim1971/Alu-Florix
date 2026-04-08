@@ -12,7 +12,7 @@ export default function RecentProjects() {
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-black text-gray-900 dark:text-white sm:text-5xl">
+          <h2 className="text-3xl font-black text-gray-900 dark:text-white sm:text-4xl">
             Projects That Inspire
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-gray-500 dark:text-gray-400">
@@ -24,12 +24,17 @@ export default function RecentProjects() {
 
         {/* 2×2 dark-card grid */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {FEATURED.map((project) => (
+          {FEATURED.map((project, i) => (
             <Link
               key={project.slug}
               href={`/work/${project.slug}`}
-              className="group relative overflow-hidden rounded-3xl"
+              className={`group relative overflow-hidden rounded-3xl${i === 3 ? " hidden sm:block" : ""}`}
             >
+              {/* View details badge */}
+              <div className="absolute right-4 top-4 z-10 rounded-full border border-white/20 bg-black/30 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">
+                View Details →
+              </div>
+
               {/* Background image */}
               <div className="relative aspect-4/3 w-full">
                 <Image

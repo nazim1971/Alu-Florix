@@ -62,7 +62,7 @@ export default function ResponsiveShowcase() {
               <span className="inline-block h-px w-8 bg-orange-400" />
               Responsive of all device
             </p>
-            <h2 className="text-4xl font-black leading-tight text-gray-900 dark:text-white sm:text-5xl">
+            <h2 className="text-3xl font-black leading-tight text-gray-900 dark:text-white sm:text-4xl">
               Awesome Responsive<br />In All Device.
             </h2>
           </div>

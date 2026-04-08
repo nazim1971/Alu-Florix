@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
+import { Star, CheckCircle2 } from "lucide-react";
 
 // API_READY — fetch hero content (headline, subtext) from CMS or API here
 
@@ -7,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="work"
-      className="relative overflow-hidden bg-white dark:bg-gray-950 py-24 lg:py-32"
+      className="relative  overflow-hidden bg-white dark:bg-gray-950 py-24 lg:py-32"
     >
       {/* Background grid decoration */}
       <div
@@ -22,7 +23,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-2 lg:px-8 lg:items-center">
         {/* Left — text */}
         <div className="flex flex-col gap-6">
-          <h1 className="text-4xl font-black leading-tight tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
+          <h1 className="text-3xl font-black leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">
            Run Your Business,
            <br />
            Leave the IT to Us
@@ -55,54 +56,52 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right — visual card */}
+        {/* Right — client testimonial card */}
         <div className="relative flex justify-center lg:justify-end">
           <Card
             variant="elevated"
             padding="lg"
-            className="w-full max-w-md space-y-6"
+            className="w-full max-w-md space-y-5"
           >
-            {/* Activity header */}
+            {/* Star rating header */}
             <div className="flex items-center justify-between">
-              <p className="text-sm font-semibold text-gray-900 dark:text-white">Live dashboard</p>
-              <span className="flex items-center gap-1.5 text-xs text-emerald-400">
-                <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
-                Active
-              </span>
+              <div className="flex items-center gap-0.5">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                ))}
+                <span className="ml-2 text-sm font-bold text-gray-900 dark:text-white">4.9</span>
+              </div>
+              <span className="text-xs text-gray-400">50+ projects shipped</span>
             </div>
 
-            {/* Metric bars */}
-            {[
-              { label: "Performance", value: 94, color: "bg-indigo-500" },
-              { label: "Conversion", value: 78, color: "bg-purple-500" },
-              { label: "Retention", value: 87, color: "bg-emerald-500" },
-            ].map((metric) => (
-              <div key={metric.label} className="space-y-1.5">
-                <div className="flex justify-between text-xs">
-                  <span className="text-gray-600 dark:text-gray-400">{metric.label}</span>
-                  <span className="font-semibold text-gray-900 dark:text-white">
-                    {metric.value}%
-                  </span>
+            {/* Client quote */}
+            <div className="rounded-xl bg-indigo-50 p-4 dark:bg-indigo-950/40">
+              <p className="text-sm italic leading-relaxed text-gray-700 dark:text-gray-300">
+                &ldquo;Working with Alu transformed our product. Delivered in 3 weeks, exactly as promised — launching it genuinely changed our business.&rdquo;
+              </p>
+              <div className="mt-3 flex items-center gap-2.5">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-xs font-bold text-white">
+                  SM
                 </div>
-                <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-800">
-                  <div
-                    className={`h-full rounded-full ${metric.color}`}
-                    style={{ width: `${metric.value}%` }}
-                  />
+                <div>
+                  <p className="text-xs font-bold text-gray-900 dark:text-white">Sarah M.</p>
+                  <p className="text-xs text-gray-500">CTO · RetailCo</p>
                 </div>
               </div>
-            ))}
+            </div>
 
-            {/* Mini log */}
-            <div className="space-y-2 rounded-xl bg-gray-100/60 dark:bg-gray-950/60 p-4">
+            {/* Delivery checklist */}
+            <div className="space-y-2.5">
               {[
-                "✓ Build passed in 4.2s",
-                "✓ Tests: 142 passed",
-                "✓ Deployed to production",
-              ].map((line) => (
-                <p key={line} className="font-mono text-xs text-emerald-600 dark:text-emerald-400">
-                  {line}
-                </p>
+                "Responsive UI delivered on schedule",
+                "Payment & auth integration complete",
+                "99.9% uptime since launch",
+                "Post-launch support included",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-500" />
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{item}</p>
+                </div>
               ))}
             </div>
           </Card>

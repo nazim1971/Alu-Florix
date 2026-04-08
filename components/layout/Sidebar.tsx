@@ -70,17 +70,17 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
 
       {/* Panel */}
       <aside
-        className={`fixed right-0 top-0 z-50 flex h-full w-80 flex-col bg-gray-950 shadow-2xl shadow-black/50 transition-transform duration-300 ease-in-out ${
+        className={`fixed right-0 top-0 z-50 flex h-full w-80 flex-col bg-white dark:bg-gray-950 shadow-2xl shadow-black/20 dark:shadow-black/50 transition-transform duration-300 ease-in-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
         aria-label="Navigation menu"
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-gray-800 px-6 py-5">
+        <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 px-6 py-5">
           <Link
             href="/"
             onClick={onClose}
-            className="flex items-center gap-2 text-lg font-bold text-white"
+            className="flex items-center gap-2 text-lg font-bold text-gray-900 dark:text-white"
           >
             <Image
               src="/images/plorix.png"
@@ -93,7 +93,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
           </Link>
           <button
             onClick={onClose}
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-700 text-gray-400 transition-colors hover:border-gray-500 hover:text-white"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 transition-colors hover:border-gray-400 dark:hover:border-gray-500 hover:text-gray-900 dark:hover:text-white"
             aria-label="Close menu"
           >
             <X className="h-4 w-4" />
@@ -104,15 +104,15 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
         <nav className="flex flex-col overflow-y-auto px-6 py-4">
           {NAV_LINKS.map((link, i) =>
             link.hasSubmenu ? (
-              <div key={link.href} className="border-b border-gray-800/80">
+              <div key={link.href} className="border-b border-gray-200 dark:border-gray-800/80">
                 <button
                   onClick={() => setServicesOpen((v) => !v)}
-                  className="flex w-full items-center justify-between py-5 text-base font-medium text-gray-400 transition-colors hover:text-white"
+                  className="flex w-full items-center justify-between py-5 text-base font-medium text-gray-600 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-white"
                 >
                   <span>SERVICES</span>
                   <ChevronDown
-                    className={`h-4 w-4 text-gray-500 transition-transform duration-200 ${
-                      isServicesOpen ? "rotate-180 text-indigo-400" : ""
+                    className={`h-4 w-4 text-gray-400 dark:text-gray-500 transition-transform duration-200 ${
+                      isServicesOpen ? "rotate-180 text-indigo-500 dark:text-indigo-400" : ""
                     }`}
                   />
                 </button>
@@ -123,9 +123,9 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
                         key={svc.title}
                         href={svc.href}
                         onClick={onClose}
-                        className="flex items-center gap-3 rounded-xl border border-gray-800 px-3 py-3 text-sm text-gray-400 transition-all hover:border-indigo-700 hover:bg-indigo-900/20 hover:text-white"
+                        className="flex items-center gap-3 rounded-xl border border-gray-200 dark:border-gray-800 px-3 py-3 text-sm text-gray-600 dark:text-gray-400 transition-all hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 hover:text-indigo-700 dark:hover:text-white"
                       >
-                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-gray-700">
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700">
                           <svc.Icon className="h-4 w-4 stroke-[1.5]" />
                         </div>
                         {svc.title}
@@ -134,7 +134,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
                     <Link
                       href="/services"
                       onClick={onClose}
-                      className="flex items-center justify-center rounded-xl border border-indigo-800 py-2.5 text-xs font-bold text-indigo-400 transition-colors hover:bg-indigo-900/30"
+                      className="flex items-center justify-center rounded-xl border border-indigo-300 dark:border-indigo-800 py-2.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 transition-colors hover:bg-indigo-50 dark:hover:bg-indigo-900/30"
                     >
                       View All Services →
                     </Link>
@@ -146,10 +146,10 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
                 key={link.href}
                 href={link.href}
                 onClick={onClose}
-                className="group flex items-center justify-between border-b border-gray-800/80 py-5 text-base font-medium text-gray-400 transition-colors hover:text-white"
+                className="group flex items-center justify-between border-b border-gray-200 dark:border-gray-800/80 py-5 text-base font-medium text-gray-600 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-white"
               >
                 <span>{link.label}</span>
-                <span className="text-xs text-gray-600 transition-colors group-hover:text-indigo-400">
+                <span className="text-xs text-gray-400 dark:text-gray-600 transition-colors group-hover:text-indigo-500 dark:group-hover:text-indigo-400">
                   0{i + 1}
                 </span>
               </Link>
@@ -160,7 +160,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
         <div className="flex-1" />
 
         {/* Footer */}
-        <div className="space-y-4 border-t border-gray-800 px-6 py-6">
+        <div className="space-y-4 border-t border-gray-200 dark:border-gray-800 px-6 py-6">
           <Link
             href="/contact"
             onClick={onClose}
@@ -169,7 +169,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
             Get Started →
           </Link>
           <div className="flex items-center justify-between">
-            <p className="text-xs text-gray-600">Toggle theme</p>
+            <p className="text-xs text-gray-500 dark:text-gray-600">Toggle theme</p>
             <ThemeToggle />
           </div>
         </div>
