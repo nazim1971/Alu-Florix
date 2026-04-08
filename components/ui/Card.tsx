@@ -28,7 +28,7 @@ export default function Card({
   return (
     <div
       className={[
-        "rounded-2xl",
+        "rounded-xl",
         variantClasses[variant],
         paddingClasses[padding],
         className,

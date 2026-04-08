@@ -71,7 +71,7 @@ export default function Services() {
         <div className="flex flex-col lg:flex-row">
 
           {/* LEFT — sticky */}
-          <div className="flex items-center border-b border-gray-200 px-6 py-16 dark:border-gray-800 lg:w-[40%] lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:self-start lg:border-b-0 lg:border-r lg:px-12 lg:py-24">
+          <div className="flex items-center border-b border-gray-200 px-4 sm:px-6 py-10 sm:py-16 dark:border-gray-800 lg:w-[40%] lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:self-start lg:border-b-0 lg:border-r lg:px-12 lg:py-24">
             <div className="max-w-xs">
               <h2 className="text-3xl font-black leading-tight text-gray-900 dark:text-white sm:text-4xl">
                 Comprehensive
@@ -95,7 +95,7 @@ export default function Services() {
           {/* RIGHT — scrollable rows */}
           <div className="flex flex-col divide-y divide-gray-200 dark:divide-gray-800 lg:w-[60%]">
             {SERVICES.map((service) => (
-              <div key={service.number} className="px-6 py-12 lg:px-12">
+              <div key={service.number} className="px-4 sm:px-6 py-10 sm:py-12 lg:px-12">
 
                 {/* Number */}
                 <p className="mb-6 text-sm font-bold text-indigo-600 dark:text-indigo-400">

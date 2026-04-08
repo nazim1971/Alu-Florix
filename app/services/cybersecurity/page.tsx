@@ -66,8 +66,8 @@ export default function CybersecurityPage() {
         imageSeed="security-service-hero"
       />
 
-      <section className="bg-white py-16 dark:bg-gray-950 lg:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-white py-10 sm:py-16 dark:bg-gray-950 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[3fr_2fr] lg:gap-16 lg:items-start">
 
             {/* ── Left column ── */}
@@ -93,7 +93,7 @@ export default function CybersecurityPage() {
               </div>
 
               {/* Main image */}
-              <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl">
+              <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-xl">
                 <Image
                   src="https://picsum.photos/seed/security-main/1200/675"
                   alt="Cybersecurity and Cloud Services"

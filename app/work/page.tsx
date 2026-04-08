@@ -20,8 +20,8 @@ export default function WorkPage() {
         imageSeed="portfolio-hero-2026"
       />
 
-      <section className="bg-white py-20 dark:bg-gray-950 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-white py-10 sm:py-20 dark:bg-gray-950 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
           <div className="mb-12 text-center">
             <h1 className="text-4xl font-black text-gray-900 dark:text-white sm:text-5xl">
@@ -40,7 +40,7 @@ export default function WorkPage() {
               <Link
                 key={project.slug}
                 href={`/work/${project.slug}`}
-                className="group relative overflow-hidden rounded-3xl"
+                className="group relative overflow-hidden rounded-xl"
               >
                 {/* View details badge */}
               <div className="absolute right-4 top-4 z-10 rounded-full border border-white/20 bg-black/30 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">

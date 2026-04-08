@@ -7,7 +7,7 @@ import { submitContact, type ContactResult } from "@/app/actions/contact";
 
 function inputCls(hasError?: string) {
   const base =
-    "w-full rounded-xl border px-4 py-3 text-sm text-gray-900 outline-none transition dark:text-white dark:bg-gray-800 ";
+    "w-full rounded-md sm:rounded-lg border px-3 py-2 sm:px-4 sm:py-3 text-sm text-gray-900 outline-none transition dark:text-white dark:bg-gray-800 ";
   return hasError
     ? base +
         "border-red-400 bg-red-50/60 focus:border-red-400 focus:ring-1 focus:ring-red-400 dark:border-red-500 dark:bg-red-950/20"
@@ -79,8 +79,8 @@ function ContactContent() {
   }, [form, accepted, loading, executeRecaptcha]);
 
   return (
-    <section id="contact" className="bg-[#EEF0F8] py-20 dark:bg-gray-950 lg:py-28">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+    <section id="contact" className="bg-[#EEF0F8] py-10 sm:py-20 dark:bg-gray-950 lg:py-28">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
 
           <div className="relative">
@@ -111,7 +111,7 @@ function ContactContent() {
             </div>
             <div className="mt-10">
               <p className="mb-4 border-b border-dashed border-gray-300 pb-2 text-sm font-semibold text-gray-700 underline dark:border-gray-700 dark:text-gray-300">Stay Connected</p>
-              <div className="grid grid-cols-4 divide-x divide-gray-200 overflow-hidden rounded-2xl border border-gray-200 bg-white dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-900">
+              <div className="grid grid-cols-4 divide-x divide-gray-200 overflow-hidden rounded-xl border border-gray-200 bg-white dark:divide-gray-700 dark:border-gray-700 dark:bg-gray-900">
                 {SOCIALS.map(({ label, svg, href }) => (
                   <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                     className="flex flex-col items-center gap-2 py-5 text-xs font-semibold text-gray-600 transition hover:bg-indigo-50 hover:text-indigo-600 dark:text-gray-400 dark:hover:bg-indigo-900/20 dark:hover:text-indigo-400">
@@ -122,7 +122,7 @@ function ContactContent() {
             </div>
           </div>
 
-          <div className="rounded-3xl bg-white p-8 shadow-xl dark:bg-gray-900 lg:p-10">
+          <div className="rounded-xl bg-white p-4 sm:p-8 shadow-xl dark:bg-gray-900 lg:p-10">
             {submitted ? (
               <div className="flex flex-col items-center gap-4 py-16 text-center">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
@@ -138,7 +138,7 @@ function ContactContent() {
             ) : (
               <>
                 <div className="mb-6 border-b border-gray-200 pb-6 dark:border-gray-700">
-                  <h2 className="text-2xl font-black text-gray-900 dark:text-white">Your Success Starts Here!</h2>
+                  <h2 className="text-xl sm:text-2xl font-black text-gray-900 dark:text-white">Your Success Starts Here!</h2>
                 </div>
 
                 {status && !status.ok && (
@@ -147,12 +147,12 @@ function ContactContent() {
                   </div>
                 )}
 
-                <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-5" noValidate>
                   <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", height: 0, width: 0, overflow: "hidden" }}>
                     <input name="website" type="text" tabIndex={-1} autoComplete="off" />
                   </div>
 
-                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
                     <div>
                       <label htmlFor="cs-fullName" className="mb-1.5 block text-xs font-semibold text-gray-600 dark:text-gray-400">
                         Full Name <span className="text-red-500">*</span>
@@ -171,7 +171,7 @@ function ContactContent() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2">
                     <div>
                       <label htmlFor="cs-email" className="mb-1.5 block text-xs font-semibold text-gray-600 dark:text-gray-400">
                         Email Address <span className="text-red-500">*</span>

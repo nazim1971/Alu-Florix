@@ -142,12 +142,12 @@ export default function FaqContent() {
   }
 
   return (
-    <section className="bg-white py-20 dark:bg-gray-950 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-white py-10 sm:py-20 dark:bg-gray-950 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[300px_1fr]">
 
           {/* Left — category list */}
-          <nav aria-label="FAQ categories" className="h-fit rounded-3xl bg-white p-4 shadow-md dark:bg-gray-900">
+          <nav aria-label="FAQ categories" className="h-fit rounded-xl bg-white p-4 shadow-md dark:bg-gray-900">
             {FAQ_CATEGORIES.map((cat, i) => {
               const isActive = activeCategory === i;
               return (
@@ -172,7 +172,7 @@ export default function FaqContent() {
           </nav>
 
           {/* Right — accordion */}
-          <div className="rounded-3xl bg-[#F0F1FA] p-6 dark:bg-gray-900 lg:p-8">
+          <div className="rounded-xl bg-[#F0F1FA] p-6 dark:bg-gray-900 lg:p-8">
             <div className="divide-y divide-gray-200 dark:divide-gray-800">
               {currentFAQs.map((faq, i) => {
                 const isOpen = openIndex === i;

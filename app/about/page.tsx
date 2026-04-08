@@ -54,8 +54,8 @@ export default function AboutPage() {
       />
 
       {/* Story + Stats */}
-      <section className="bg-white dark:bg-gray-950 py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-white dark:bg-gray-950 py-10 sm:py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">
               Our Story
@@ -91,8 +91,8 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="bg-gray-50 dark:bg-gray-900/40 py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-gray-50 dark:bg-gray-900/40 py-10 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-indigo-400">
               What drives us
@@ -114,8 +114,8 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="bg-white dark:bg-gray-950 py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-white dark:bg-gray-950 py-10 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-indigo-400">
               The people
@@ -126,7 +126,7 @@ export default function AboutPage() {
             {TEAM.map((member) => (
               <Card key={member.name} variant="elevated" padding="lg" className="flex items-center gap-5">
                 <div
-                  className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${member.color} text-lg font-black text-white`}
+                  className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${member.color} text-lg font-black text-white`}
                 >
                   {member.initials}
                 </div>
@@ -141,8 +141,8 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gray-50 dark:bg-gray-900/40 py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
+      <section className="bg-gray-50 dark:bg-gray-900/40 py-10 sm:py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 text-center">
           <h2 className="text-3xl font-black text-gray-900 dark:text-white">Want to work with us?</h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400">
             We take on a limited number of new clients each quarter.

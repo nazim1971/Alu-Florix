@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="work"
-      className="relative  overflow-hidden bg-white dark:bg-gray-950 py-24 lg:py-32"
+      className="relative  overflow-hidden bg-white dark:bg-gray-950 py-10 sm:py-24 lg:py-32"
     >
       {/* Background grid decoration */}
       <div
@@ -20,7 +20,7 @@ export default function Hero() {
         className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 h-125 w-200 rounded-full bg-indigo-600/10 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-2 lg:px-8 lg:items-center">
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:px-8 lg:items-center">
         {/* Left — text */}
         <div className="flex flex-col gap-6">
           <h1 className="text-3xl font-black leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl">

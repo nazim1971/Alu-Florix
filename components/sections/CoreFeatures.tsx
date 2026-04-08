@@ -174,8 +174,8 @@ export default function CoreFeatures() {
   const [showAllTech, setShowAllTech] = useState(false);
 
   return (
-    <section className="bg-slate-50 py-20 dark:bg-gray-900/50 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-slate-50 py-10 sm:py-20 dark:bg-gray-900/50 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="mb-10 text-center">
@@ -195,7 +195,7 @@ export default function CoreFeatures() {
 
         {/* Tab switcher */}
         <div className="mb-10 flex justify-center">
-          <div className="inline-flex gap-1 rounded-2xl border border-gray-200 bg-white p-1.5 shadow-sm dark:border-gray-700 dark:bg-gray-900">
+          <div className="inline-flex gap-1 rounded-xl border border-gray-200 bg-white p-1.5 shadow-sm dark:border-gray-700 dark:bg-gray-900">
             {TABS.map((tab) => (
               <button
                 key={tab}
@@ -225,7 +225,7 @@ export default function CoreFeatures() {
                 return (
                   <div
                     key={f.title}
-                    className={`flex items-start gap-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-gray-900 ${vis}`}
+                    className={`flex items-start gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-gray-900 ${vis}`}
                   >
                     <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${f.color}`}>
                       {f.icon}
@@ -271,7 +271,7 @@ export default function CoreFeatures() {
                         return (
                           <div
                             key={tech.name}
-                            className={`flex flex-col items-center gap-3 rounded-2xl border border-gray-200 ${tech.bg} px-4 py-5 text-center shadow-sm transition hover:shadow-md dark:border-gray-800 ${itemVis}`}
+                            className={`flex flex-col items-center gap-3 rounded-xl border border-gray-200 ${tech.bg} px-4 py-5 text-center shadow-sm transition hover:shadow-md dark:border-gray-800 ${itemVis}`}
                           >
                             <tech.Icon
                               className="h-9 w-9"

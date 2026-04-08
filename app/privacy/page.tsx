@@ -81,8 +81,8 @@ export default function PrivacyPage() {
       />
 
       {/* Content */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+    <section className="py-10 sm:py-16 lg:py-24">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="mb-12 text-gray-600 dark:text-gray-400 leading-relaxed">
             At Plorix, we take your privacy seriously. This policy describes what
             personal information we collect, how we use it, and the choices you
@@ -108,7 +108,7 @@ export default function PrivacyPage() {
           </div>
 
           {/* Contact note */}
-          <div className="mt-16 rounded-2xl border border-indigo-500/30 bg-indigo-500/5 p-6">
+          <div className="mt-16 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-6">
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Questions or requests regarding your personal data?{" "}
               <a

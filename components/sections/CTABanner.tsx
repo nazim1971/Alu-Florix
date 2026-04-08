@@ -4,9 +4,9 @@ import Button from "@/components/ui/Button";
 
 export default function CTABanner() {
   return (
-    <section id="contact" className="bg-gray-50 dark:bg-gray-950 py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-indigo-600 via-indigo-700 to-purple-800 px-8 py-16 text-center shadow-2xl shadow-indigo-900/50 lg:px-16 lg:py-24">
+    <section id="contact" className="bg-gray-50 dark:bg-gray-950 py-10 sm:py-24 lg:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-xl bg-linear-to-br from-indigo-600 via-indigo-700 to-purple-800 px-8 py-16 text-center shadow-2xl shadow-indigo-900/50 lg:px-16 lg:py-24">
           {/* Background decoration */}
           <div
             aria-hidden

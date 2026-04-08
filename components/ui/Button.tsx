@@ -1,6 +1,7 @@
 import React from "react";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "ghost" | "outline";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
@@ -19,8 +20,18 @@ const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
 
 const sizeClasses: Record<NonNullable<ButtonProps["size"]>, string> = {
   sm: "px-4 py-2 text-sm rounded-md",
-  md: "px-5 py-2.5 text-sm rounded-lg",
-  lg: "px-7 py-3.5 text-base rounded-xl",
+
+  // 🔥 Responsive by default (best practice)
+  md: `
+    px-4 py-2 text-sm rounded-md
+    md:px-6 md:py-3 md:text-base md:rounded-lg
+  `,
+
+  lg: `
+     px-4 py-2 text-sm rounded-md
+    md:px-6 md:py-3 md:text-base md:rounded-lg
+    lg:px-7 lg:py-3.5 lg:text-lg lg:rounded-xl
+  `,
 };
 
 export default function Button({
@@ -34,7 +45,12 @@ export default function Button({
   const base =
     "inline-flex items-center justify-center gap-2 font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950 disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
 
-  const classes = [base, variantClasses[variant], sizeClasses[size], className]
+  const classes = [
+    base,
+    variantClasses[variant],
+    sizeClasses[size],
+    className,
+  ]
     .filter(Boolean)
     .join(" ");
 

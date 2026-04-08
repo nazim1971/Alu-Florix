@@ -7,8 +7,8 @@ const FEATURED = PROJECTS.slice(0, 4);
 
 export default function RecentProjects() {
   return (
-    <section id="projects" className="bg-white py-20 dark:bg-gray-950 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="projects" className="bg-white py-10 sm:py-20 dark:bg-gray-950 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
         <div className="mb-12 text-center">
@@ -28,7 +28,7 @@ export default function RecentProjects() {
             <Link
               key={project.slug}
               href={`/work/${project.slug}`}
-              className={`group relative overflow-hidden rounded-3xl${i === 3 ? " hidden sm:block" : ""}`}
+              className={`group relative overflow-hidden rounded-xl${i === 3 ? " hidden sm:block" : ""}`}
             >
               {/* View details badge */}
               <div className="absolute right-4 top-4 z-10 rounded-full border border-white/20 bg-black/30 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm">

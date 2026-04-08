@@ -128,7 +128,7 @@ export default function Navbar() {
                   {/* Mega dropdown */}
                   {dropdownOpen && (
                     <div
-                      className="absolute top-full left-1/2 -translate-x-1/2 w-180 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-2xl dark:border-gray-800 dark:bg-gray-900"
+                      className="absolute top-full left-1/2 -translate-x-1/2 w-180 overflow-hidden rounded-xl border border-gray-100 bg-white shadow-2xl dark:border-gray-800 dark:bg-gray-900"
                       onMouseEnter={openDropdown}
                       onMouseLeave={scheduleClose}
                     >

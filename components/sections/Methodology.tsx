@@ -1,7 +1,7 @@
 export default function Methodology() {
   return (
-    <section className="bg-white py-20 dark:bg-gray-950 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="bg-white py-10 sm:py-20 dark:bg-gray-950 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-14 text-center">
           <p className="mb-3 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-widest text-orange-500">
@@ -17,7 +17,7 @@ export default function Methodology() {
         {/* Three columns */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {/* Card 1 — Versatile Tech Stack */}
-          <div className="flex flex-col overflow-hidden rounded-3xl bg-emerald-100 dark:bg-emerald-950/40 p-8">
+          <div className="flex flex-col overflow-hidden rounded-xl bg-emerald-100 dark:bg-emerald-950/40 p-8">
             <h3 className="mb-3 text-2xl font-black text-gray-900 dark:text-white leading-snug">
               Versatile<br />Tech Stack
             </h3>
@@ -25,7 +25,7 @@ export default function Methodology() {
               We choose the right technology for each project — from React & Next.js to .NET and NestJS, always selecting what delivers the best outcome.
             </p>
             {/* Mockup preview */}
-            <div className="mt-auto overflow-hidden rounded-2xl border-2 border-gray-900/20 shadow-lg">
+            <div className="mt-auto overflow-hidden rounded-xl border-2 border-gray-900/20 shadow-lg">
               <div className="flex items-center gap-1.5 bg-gray-900 px-3 py-2">
                 <span className="h-2 w-2 rounded-full bg-red-500" />
                 <span className="h-2 w-2 rounded-full bg-yellow-400" />
@@ -49,7 +49,7 @@ export default function Methodology() {
           </div>
 
           {/* Card 2 — Performance First */}
-          <div className="flex flex-col overflow-hidden rounded-3xl bg-yellow-100 dark:bg-yellow-950/30 p-8">
+          <div className="flex flex-col overflow-hidden rounded-xl bg-yellow-100 dark:bg-yellow-950/30 p-8">
             <h3 className="mb-3 text-2xl font-black text-gray-900 dark:text-white leading-snug">
               Google<br />Page‑Speed
             </h3>
@@ -57,7 +57,7 @@ export default function Methodology() {
               Google has shifted towards mobile‑first indexing. We build every site to achieve top Lighthouse scores out of the box.
             </p>
             {/* Speed dial */}
-            <div className="mt-auto flex flex-col items-center gap-4 rounded-2xl bg-white/70 dark:bg-gray-900/50 p-6 shadow">
+            <div className="mt-auto flex flex-col items-center gap-4 rounded-xl bg-white/70 dark:bg-gray-900/50 p-6 shadow">
               {/* Gauge arc */}
               <div className="relative flex h-28 w-28 items-center justify-center">
                 <svg viewBox="0 0 120 120" className="absolute inset-0 h-full w-full -rotate-90">
@@ -87,7 +87,7 @@ export default function Methodology() {
           </div>
 
           {/* Card 3 — Clean Architecture */}
-          <div className="flex flex-col overflow-hidden rounded-3xl bg-indigo-100 dark:bg-indigo-950/40 p-8">
+          <div className="flex flex-col overflow-hidden rounded-xl bg-indigo-100 dark:bg-indigo-950/40 p-8">
             <h3 className="mb-3 text-2xl font-black text-gray-900 dark:text-white leading-snug">
               Clean<br />Architecture
             </h3>
@@ -95,7 +95,7 @@ export default function Methodology() {
               SOLID principles, layered architecture, and thorough code reviews ensure maintainable, scalable code you&apos;ll own forever.
             </p>
             {/* Code block mockup */}
-            <div className="mt-auto overflow-hidden rounded-2xl bg-gray-900 p-5 shadow-lg font-mono text-[11px] leading-relaxed">
+            <div className="mt-auto overflow-hidden rounded-xl bg-gray-900 p-5 shadow-lg font-mono text-[11px] leading-relaxed">
               <p className="text-gray-500">// Clean service layer</p>
               <p className="text-indigo-400">
                 <span className="text-purple-400">export class</span>{" "}

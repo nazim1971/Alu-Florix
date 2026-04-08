@@ -53,8 +53,8 @@ export default async function ProjectDetailPage(props: {
 
       {/* Full-width main image */}
       <section className="bg-white dark:bg-gray-950">
-        <div className="mx-auto max-w-7xl px-6 pt-12 lg:px-8">
-          <div className="relative w-full overflow-hidden rounded-3xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-10 sm:pt-12 lg:px-8">
+          <div className="relative w-full overflow-hidden rounded-xl">
             <div className="relative aspect-video w-full">
               <Image
                 src={`https://picsum.photos/seed/${project.mainImageSeed}/1200/675`}
@@ -70,8 +70,8 @@ export default async function ProjectDetailPage(props: {
       </section>
 
       {/* Two-column content */}
-      <section className="bg-white py-16 dark:bg-gray-950 lg:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-white py-10 sm:py-16 dark:bg-gray-950 lg:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[3fr_1.5fr]">
 
             {/* ── Left column ── */}
@@ -121,7 +121,7 @@ export default async function ProjectDetailPage(props: {
 
                 {/* Gallery row 1 */}
                 <div className="mt-8 grid grid-cols-2 gap-4">
-                  <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+                  <div className="relative aspect-4/3 overflow-hidden rounded-xl">
                     <Image
                       src={`https://picsum.photos/seed/${project.gallery1Seed}/600/450`}
                       alt={`${project.title} design process`}
@@ -130,7 +130,7 @@ export default async function ProjectDetailPage(props: {
                       sizes="(max-width: 640px) 50vw, 300px"
                     />
                   </div>
-                  <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+                  <div className="relative aspect-4/3 overflow-hidden rounded-xl">
                     <Image
                       src={`https://picsum.photos/seed/${project.gallery2Seed}/600/450`}
                       alt={`${project.title} development phase`}
@@ -171,7 +171,7 @@ export default async function ProjectDetailPage(props: {
 
                 {/* Gallery row 2 */}
                 <div className="mt-8 grid grid-cols-2 gap-4">
-                  <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+                  <div className="relative aspect-4/3 overflow-hidden rounded-xl">
                     <Image
                       src={`https://picsum.photos/seed/${project.gallery3Seed}/600/450`}
                       alt={`${project.title} post-launch results`}
@@ -180,7 +180,7 @@ export default async function ProjectDetailPage(props: {
                       sizes="(max-width: 640px) 50vw, 300px"
                     />
                   </div>
-                  <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+                  <div className="relative aspect-4/3 overflow-hidden rounded-xl">
                     <Image
                       src={`https://picsum.photos/seed/${project.gallery4Seed}/600/450`}
                       alt={`${project.title} final product overview`}
@@ -222,7 +222,7 @@ export default async function ProjectDetailPage(props: {
             <div className="lg:sticky lg:top-28 lg:self-start space-y-6">
 
               {/* Project Info Card */}
-              <div className="rounded-3xl border border-gray-100 bg-gray-50 p-7 dark:border-gray-800 dark:bg-gray-900">
+              <div className="rounded-xl border border-gray-100 bg-gray-50 p-7 dark:border-gray-800 dark:bg-gray-900">
                 <h3 className="mb-6 text-lg font-black text-gray-900 dark:text-white">
                   Project Info
                 </h3>
@@ -246,7 +246,7 @@ export default async function ProjectDetailPage(props: {
               </div>
 
               {/* CTA card */}
-              <div className="rounded-3xl bg-linear-to-br from-indigo-900 via-purple-900 to-indigo-800 p-7 text-white">
+              <div className="rounded-xl bg-linear-to-br from-indigo-900 via-purple-900 to-indigo-800 p-7 text-white">
                 <h3 className="text-xl font-black leading-snug">
                   Ready to work with us?
                 </h3>

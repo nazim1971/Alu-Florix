@@ -15,7 +15,7 @@ const MARQUEE_ITEMS = [
 
 function MockBrowser() {
   return (
-    <div className="w-full overflow-hidden rounded-2xl border-2 border-gray-800 dark:border-gray-600 shadow-2xl">
+    <div className="w-full overflow-hidden rounded-xl border-2 border-gray-800 dark:border-gray-600 shadow-2xl">
       {/* Browser chrome */}
       <div className="flex items-center gap-1.5 bg-gray-900 px-4 py-2.5">
         <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
@@ -53,16 +53,16 @@ function MockBrowser() {
 
 export default function ResponsiveShowcase() {
   return (
-    <section className="overflow-hidden bg-white py-20 dark:bg-gray-950 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="overflow-hidden bg-white py-10 sm:py-20 dark:bg-gray-950 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top text row */}
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
+        <div className="grid grid-cols-1 gap-6 sm:gap-10 lg:grid-cols-2 lg:items-start">
           <div>
             <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-orange-500">
               <span className="inline-block h-px w-8 bg-orange-400" />
               Responsive of all device
             </p>
-            <h2 className="text-3xl font-black leading-tight text-gray-900 dark:text-white sm:text-4xl">
+            <h2 className="text-2xl font-black leading-tight text-gray-900 dark:text-white sm:text-4xl">
               Awesome Responsive<br />In All Device.
             </h2>
           </div>
@@ -76,7 +76,7 @@ export default function ResponsiveShowcase() {
         </div>
 
         {/* Device icons row */}
-        <div className="mt-14 grid grid-cols-2 gap-6 border-b border-gray-200 pb-12 dark:border-gray-800 sm:grid-cols-4">
+        <div className="mt-10 sm:mt-14 grid grid-cols-2 gap-6 border-b border-gray-200 pb-8 sm:pb-12 dark:border-gray-800 sm:grid-cols-4">
           {DEVICES.map((device) => (
             <div key={device.size} className="flex flex-col items-center gap-3 text-center">
               <device.Icon
@@ -104,7 +104,7 @@ export default function ResponsiveShowcase() {
         </div>
 
         {/* Mockup comparison */}
-        <div className="mt-16 flex flex-col items-center gap-8 sm:flex-row sm:justify-center sm:gap-10 lg:gap-16">
+        <div className="mt-10 sm:mt-16 flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-10 lg:gap-16">
           {/* Laptop mockup */}
           <div className="w-full max-w-sm">
             <MockBrowser />
@@ -128,7 +128,7 @@ export default function ResponsiveShowcase() {
       </div>
 
       {/* Marquee banner */}
-      <div className="mt-16 overflow-hidden border-y border-indigo-100 bg-indigo-50 py-4 dark:border-indigo-900/40 dark:bg-indigo-900/20">
+      <div className="mt-10 sm:mt-16 overflow-hidden border-y border-indigo-100 bg-indigo-50 py-4 dark:border-indigo-900/40 dark:bg-indigo-900/20">
         <div className="flex w-max animate-marquee gap-10">
           {MARQUEE_ITEMS.map((item, i) => (
             <span
