@@ -75,7 +75,7 @@ export default function Methodology() {
                   />
                 </svg>
                 <div className="text-center">
-                  <div className="text-3xl font-black text-gray-900 dark:text-white">98</div>
+                  <div className="text-3xl font-black text-gray-900 dark:text-white">100</div>
                   <div className="text-[10px] text-gray-700 dark:text-gray-400">/100</div>
                 </div>
               </div>
