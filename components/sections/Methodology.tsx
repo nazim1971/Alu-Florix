@@ -70,7 +70,7 @@ export default function Methodology() {
                     stroke="#22c55e"
                     strokeWidth="10"
                     strokeDasharray="314"
-                    strokeDashoffset="20"
+                    strokeDashoffset="0"
                     strokeLinecap="round"
                   />
                 </svg>
