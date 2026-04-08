@@ -139,7 +139,7 @@ export default function Navbar() {
 
                         {/* Left — service cards */}
                         <div className="p-5">
-                          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-600">
                             Problems We Solve
                           </p>
                           <div className="grid grid-cols-2 gap-2">
@@ -157,7 +157,7 @@ export default function Navbar() {
                                   <p className="text-sm font-semibold leading-snug text-gray-900 dark:text-white">
                                     {svc.title}
                                   </p>
-                                  <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">
+                                  <p className="mt-0.5 text-xs text-gray-600 dark:text-gray-400">
                                     {svc.desc}
                                   </p>
                                 </div>
@@ -178,7 +178,7 @@ export default function Navbar() {
 
                         {/* Right — industries + CTA */}
                         <div className="border-l border-gray-100 bg-gray-50 p-5 dark:border-gray-800 dark:bg-gray-900/60">
-                          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                          <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-600">
                             Industries We Cover
                           </p>
                           <div className="flex flex-wrap gap-1.5">

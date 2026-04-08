@@ -196,7 +196,7 @@ export default function FaqContent() {
                       </span>
                     </button>
                     {isOpen && (
-                      <p className="mt-3 pl-6 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                      <p className="mt-3 pl-6 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                         {faq.a}
                       </p>
                     )}

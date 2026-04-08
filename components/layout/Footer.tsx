@@ -97,7 +97,7 @@ export default function Footer() {
             <Image  src="/images/plorix.png" alt="Plorix Logo" width={40} height={40}  />
             <div>
               <p className="font-bold leading-none text-gray-900 dark:text-white">Plorix</p>
-              <p className="mt-0.5 text-xs text-gray-500">Digital Agency</p>
+              <p className="mt-0.5 text-xs text-gray-600 dark:text-gray-400">Digital Agency</p>
             </div>
           </Link>
 
@@ -107,7 +107,7 @@ export default function Footer() {
               <MapPin className="h-4 w-4" />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-400">
                 Address
               </p>
               <p className="mt-0.5 text-sm text-gray-700 dark:text-gray-300">
@@ -122,7 +122,7 @@ export default function Footer() {
               <Send className="h-4 w-4" />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-400">
                 Say Hello
               </p>
               <a
@@ -156,7 +156,7 @@ export default function Footer() {
                   className="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 px-3 py-2"
                 >
                   <div>
-                    <p className="text-xs leading-none text-gray-500">Review On</p>
+                    <p className="text-xs leading-none text-gray-600 dark:text-gray-400">Review On</p>
                     <p className="mt-0.5 text-sm font-bold text-gray-900 dark:text-white">{platform}</p>
                   </div>
                   <div className="flex gap-0.5">
@@ -165,13 +165,13 @@ export default function Footer() {
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   </div>
-                  <p className="text-xs text-gray-500">(50)</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">(50)</p>
                 </div>
               ))}
             </div>
 
             {/* Social icons */}
-            <p className="mt-6 text-xs font-semibold uppercase tracking-wider text-gray-500">
+            <p className="mt-6 text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-400">
               Find us on
             </p>
             <div className="mt-3 flex gap-2">
@@ -198,7 +198,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-500 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-white"
+                      className="text-sm text-gray-600 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-white"
                     >
                       {link.label}
                     </Link>
@@ -214,15 +214,15 @@ export default function Footer() {
       {/* ── Bottom bar ── */}
       <div className="border-t border-gray-200 dark:border-gray-800">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 py-5 lg:px-8">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
             Copyright {new Date().getFullYear()}{" "}
             <span className="font-bold text-gray-900 dark:text-white">Plorix</span> — All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="/terms" className="text-sm text-gray-500 transition-colors hover:text-gray-900 dark:hover:text-white">
+            <Link href="/terms" className="text-sm text-gray-600 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-white">
               Terms &amp; Conditions
             </Link>
-            <Link href="/privacy" className="text-sm text-gray-500 transition-colors hover:text-gray-900 dark:hover:text-white">
+            <Link href="/privacy" className="text-sm text-gray-600 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-white">
               Privacy Policy
             </Link>
             <ThemeToggle />

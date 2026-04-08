@@ -149,7 +149,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
                 className="group flex items-center justify-between border-b border-gray-200 dark:border-gray-800/80 py-5 text-base font-medium text-gray-600 dark:text-gray-400 transition-colors hover:text-gray-900 dark:hover:text-white"
               >
                 <span>{link.label}</span>
-                <span className="text-xs text-gray-400 dark:text-gray-600 transition-colors group-hover:text-indigo-500 dark:group-hover:text-indigo-400">
+                <span className="text-xs text-gray-600 dark:text-gray-400 transition-colors group-hover:text-indigo-500 dark:group-hover:text-indigo-400">
                   0{i + 1}
                 </span>
               </Link>
@@ -169,7 +169,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
             Get Started →
           </Link>
           <div className="flex items-center justify-between">
-            <p className="text-xs text-gray-500 dark:text-gray-600">Toggle theme</p>
+            <p className="text-xs text-gray-600 dark:text-gray-400">Toggle theme</p>
             <ThemeToggle />
           </div>
         </div>

@@ -19,8 +19,12 @@ export default function RootLayout({
       lang="en"
       className="h-full antialiased"
       suppressHydrationWarning={true}
-      
     >
+      <head>
+        <link rel="preconnect" href="https://www.google.com" />
+        <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.recaptcha.net" crossOrigin="anonymous" />
+      </head>
       <body className="min-h-full flex flex-col bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100">
         <Providers>
           <Navbar />

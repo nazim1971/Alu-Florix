@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { Phone, Mail, Loader2, CheckCircle2 } from "lucide-react";
 import { submitContact, type ContactResult } from "@/app/actions/contact";
@@ -95,7 +95,7 @@ function ContactContent() {
                   <Phone className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">To More Inquiry</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">To More Inquiry</p>
                   <p className="mt-0.5 text-base font-bold text-gray-900 dark:text-white">+880 1629-290809</p>
                 </div>
               </div>
@@ -104,7 +104,7 @@ function ContactContent() {
                   <Mail className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
                 </div>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">To Send Mail</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">To Send Mail</p>
                   <p className="mt-0.5 text-base font-bold text-gray-900 dark:text-white">admin@plorixhub.com</p>
                 </div>
               </div>
@@ -201,7 +201,7 @@ function ContactContent() {
 
                   <div>
                     <label htmlFor="cs-message" className="mb-1.5 block text-xs font-semibold text-gray-600 dark:text-gray-400">
-                      Message <span className="font-normal text-gray-400">(optional)</span>
+                        Message <span className="font-normal text-gray-600 dark:text-gray-400">(optional)</span>
                     </label>
                     <textarea id="cs-message" name="message" rows={4}
                       value={form.message} onChange={handleChange} className={inputCls(errs.message) + " resize-none"} />
@@ -225,7 +225,7 @@ function ContactContent() {
                     {loading ? (<><Loader2 className="h-4 w-4 animate-spin" />Sending&hellip;</>) : "Submit Now"}
                   </button>
 
-                  <p className="text-center text-[11px] text-gray-400">
+                  <p className="text-center text-[11px] text-gray-600 dark:text-gray-400">
                     Protected by reCAPTCHA &amp; honeypot spam filtering.
                   </p>
                 </form>
@@ -240,9 +240,29 @@ function ContactContent() {
 }
 
 export default function ContactSection() {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const [providerReady, setProviderReady] = useState(false);
+
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setProviderReady(true); observer.disconnect(); } },
+      { rootMargin: "400px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}>
-      <ContactContent />
-    </GoogleReCaptchaProvider>
+    <div ref={wrapperRef}>
+      {providerReady ? (
+        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ""}>
+          <ContactContent />
+        </GoogleReCaptchaProvider>
+      ) : (
+        <ContactContent />
+      )}
+    </div>
   );
 }

@@ -76,12 +76,12 @@ export default function Methodology() {
                 </svg>
                 <div className="text-center">
                   <div className="text-3xl font-black text-gray-900 dark:text-white">98</div>
-                  <div className="text-[10px] text-gray-500">/100</div>
+                  <div className="text-[10px] text-gray-700 dark:text-gray-400">/100</div>
                 </div>
               </div>
               <div className="text-center">
                 <p className="text-sm font-bold text-gray-900 dark:text-white">⚡ Lightning Fast</p>
-                <p className="mt-1 text-xs text-gray-500">Core Web Vitals &amp; GTmetrix Optimized</p>
+                <p className="mt-1 text-xs text-gray-600 dark:text-gray-400">Core Web Vitals &amp; GTmetrix Optimized</p>
               </div>
             </div>
           </div>
@@ -96,9 +96,9 @@ export default function Methodology() {
             </p>
             {/* Code block mockup */}
             <div className="mt-auto overflow-hidden rounded-xl bg-gray-900 p-5 shadow-lg font-mono text-[11px] leading-relaxed">
-              <p className="text-gray-500">// Clean service layer</p>
+              <p className="text-gray-400">{"// Clean service layer"}</p>
               <p className="text-indigo-400">
-                <span className="text-purple-400">export class</span>{" "}
+                <span className="text-violet-400">export class</span>{" "}
                 <span className="text-yellow-300">UserService</span>{" "}
                 {"{"}</p>
               <p className="pl-4 text-green-400">
@@ -110,7 +110,7 @@ export default function Methodology() {
               <p className="pl-10 text-gray-400">.findOneOrFail(id);</p>
               <p className="pl-4 text-green-400">{"}"}</p>
               <p className="text-indigo-400">{"}"}</p>
-              <p className="mt-2 text-gray-500">// 100% test coverage</p>
+              <p className="mt-2 text-gray-400">{"// 100% test coverage"}</p>
               <p className="text-emerald-400">✓ All tests passing (248)</p>
             </div>
           </div>

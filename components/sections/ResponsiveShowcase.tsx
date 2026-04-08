@@ -21,7 +21,7 @@ function MockBrowser() {
         <span className="h-2.5 w-2.5 rounded-full bg-red-500" />
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
         <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
-        <div className="ml-3 flex-1 rounded bg-gray-700 px-2 py-0.5 text-[10px] text-gray-400">
+        <div className="ml-3 flex-1 rounded bg-gray-700 px-2 py-0.5 text-[10px] text-gray-200">
           https://plorixhub.com
         </div>
       </div>
@@ -88,12 +88,12 @@ export default function ResponsiveShowcase() {
               />
               <p
                 className={`text-sm font-bold ${
-                  device.active ? "text-gray-900 dark:text-white" : "text-gray-500 dark:text-gray-500"
+                  device.active ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-400"
                 }`}
               >
                 {device.size}
               </p>
-              <p className="whitespace-pre-line text-xs leading-relaxed text-gray-400">
+              <p className="whitespace-pre-line text-xs leading-relaxed text-gray-600 dark:text-gray-400">
                 {device.label}
               </p>
               {device.active && (

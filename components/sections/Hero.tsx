@@ -50,7 +50,7 @@ export default function Hero() {
             ].map((stat) => (
               <div key={stat.label}>
                 <p className="text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</p>
-                <p className="text-sm text-gray-500">{stat.label}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -71,7 +71,7 @@ export default function Hero() {
                 ))}
                 <span className="ml-2 text-sm font-bold text-gray-900 dark:text-white">4.9</span>
               </div>
-              <span className="text-xs text-gray-400">50+ projects shipped</span>
+              <span className="text-xs text-gray-600 dark:text-gray-400">50+ projects shipped</span>
             </div>
 
             {/* Client quote */}
@@ -85,7 +85,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-gray-900 dark:text-white">Sarah M.</p>
-                  <p className="text-xs text-gray-500">CTO · RetailCo</p>
+                  <p className="text-xs text-gray-700 dark:text-gray-300">CTO · RetailCo</p>
                 </div>
               </div>
             </div>

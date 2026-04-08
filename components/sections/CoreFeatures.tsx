@@ -97,7 +97,7 @@ const FEATURES = [
   },
   {
     icon: <Headphones className="h-6 w-6" />,
-    color: "bg-purple-100 text-purple-600 dark:bg-purple-950 dark:text-purple-400",
+    color: "bg-purple-100 text-purple-600 dark:bg-purple-950 dark:text-purple-300",
     title: "Dedicated Support",
     desc: "Responsive support team available throughout the project lifecycle.",
   },
@@ -261,7 +261,7 @@ export default function CoreFeatures() {
                 }
                 return (
                   <div key={group.category} className={groupVis}>
-                    <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+                    <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gray-600 dark:text-gray-400">
                       {group.category}
                     </p>
                     <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">

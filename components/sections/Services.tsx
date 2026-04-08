@@ -127,7 +127,7 @@ export default function Services() {
                       alt={service.title}
                       fill
                       className="object-contain "
-                      sizes="(max-width: 1024px) 50vw, 30vw"
+                      sizes="(max-width: 640px) calc(50vw - 2rem), (max-width: 1024px) 45vw, 20vw"
                     />
                   </div>
                 </div>
